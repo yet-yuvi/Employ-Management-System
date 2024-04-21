@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { AppRouterProvider } from "./routes";
+import { Outlet } from "react-router-dom";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <AppRouterProvider>
+        <Outlet />
+      </AppRouterProvider>
+    </>
   );
 }
 
 export default App;
+
+// {
+//   <div>  top div 
+//   <secure-route>
+//     const [visible, setVisible] = useState(true)
+//     <div visible={}></div> banner bar
+//     <div> web app body - display-flex
+//       <div></div> nav bar
+//       <div></div> body section
+//     </div>
+//   </secure-route> 
+//   <public-route>
+//     <div></div>
+//   </public-route>
+// </div> 
+// }
