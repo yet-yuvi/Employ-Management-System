@@ -1,26 +1,20 @@
-import { useEffect } from 'react';
-import { Outlet, useNavigate, useLocation } from 'react-router-dom';
-
+import { Outlet } from "react-router-dom";
+import { BannerBar, NavBar } from "../components";
 
 export const Base = () => {
-	const navigate = useNavigate();
-	const location = useLocation();
-	useEffect(() => {
-		if (location.pathname === '/') {
-			navigate('home');
-		}
-	// eslint-disable-next-line react-hooks/exhaustive-deps
-	},[]);
-
   return (
-				<div className= " h-93vh w-screen bg-gray-500 overflow-y-auto">
-					<div>Banner bar</div>
-  					<div>
-    					<div>Navbar</div>
-    					<Outlet />
-   					</div>
-				</div>
-	);
+    <div className="h-screen w-screen flex flex-col">
+      <div className="fixed top-0 left-0 right-0 z-50">
+        <BannerBar />
+      </div>
+      <div className="flex h-full mt-[70px]">
+        <div className="h-full">
+          <NavBar />
+        </div>
+        <div>
+          <Outlet />
+        </div>
+      </div>
+    </div>
+  );
 };
-
-

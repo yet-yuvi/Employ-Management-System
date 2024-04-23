@@ -6,10 +6,11 @@ export const SignUp = () => {
   const [lName, setLname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [check, setCheck] = useState(false);
   return (
     <>
-      <div className="h-screen flex items-end justify-center bg-gray-100 font-poppins">
+      <div className="h-screen flex items-center justify-center bg-gray-100 font-poppins">
         <div className="max-h-80vh my-auto w-full xl:w-1/4 lg:w-1/4 md:w-1/3  text-center flex items-center justify-center bg-gray-50 p-6 shadow-md rounded-xl">
           <div>
             <div className="space-y-2 my-auto">
@@ -46,6 +47,12 @@ export const SignUp = () => {
                 required={true}
                 placeholder="Password"
                 setValue={setPassword}
+              />
+              <PasswordField
+                title="Confirm Password*"
+                required={true}
+                placeholder="Confirm Password"
+                setValue={setConfirmPassword}
               />
               <div className="w-full flex justify-between">
                 <CheckBox
