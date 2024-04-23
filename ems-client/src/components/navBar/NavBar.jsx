@@ -7,13 +7,14 @@ export const NavBar = () => {
   const navMenuItems = ["Home", "Employes", "Profile", "About"];
 
   const handleMenuItemClick = (route) => {
+    console.log("hi");
     navigate(`/${route.toLowerCase()}`);
   };
   const handleLogoutClick = () => {
     navigate("/signin");
   };
   return (
-    <div className="h-full w-56 bg-gray-300 flex flex-col justify-between items-center">
+    <div className="h-full w-52 bg-gray-300 flex flex-col justify-between items-center">
       <div className="w-full flex flex-col items-center">
         <p className="w-full bg-gray-400 font-semibold text-2xl text-black p-4 border-b-2 text-center">
           Ems
