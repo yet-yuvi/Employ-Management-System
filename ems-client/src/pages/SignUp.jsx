@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { CheckBox, TextInput, PasswordField, ColorText } from "../components";
+import googleIcon from "../icons/google_icon.svg";
+import { useNavigate } from 'react-router-dom';
 
 export const SignUp = () => {
   const [fName, setFname] = useState("");
@@ -8,6 +10,13 @@ export const SignUp = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [check, setCheck] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleSignInClick = () => {
+    navigate("/signin")
+  }
+
   return (
     <>
       <div className="h-screen flex items-center justify-center bg-gray-100 font-poppins">
@@ -65,6 +74,10 @@ export const SignUp = () => {
               <button className="bg-black text-white w-full h-12 rounded-md">
                 Sign Up
               </button>
+              <button className="bg-white ring-1 ring-gray-200 w-full h-12 rounded-md flex items-center justify-center">
+                <img src={googleIcon} alt="G" className="mr-2" />
+                Sign in with Google
+              </button>
             </div>
             <div className="mt-8">
               <div className="w-full flex justify-center">
@@ -73,7 +86,7 @@ export const SignUp = () => {
                     Already have an account?
                   </h1>
                 </div>
-                <ColorText text="Sign In" />
+                <ColorText route={handleSignInClick} text="Sign In" />
               </div>
             </div>
           </div>

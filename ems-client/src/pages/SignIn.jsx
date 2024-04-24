@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
 import { CheckBox, TextInput, PasswordField, ColorText } from "../components";
+import { useNavigate } from 'react-router-dom';
 
 export const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [check, setCheck] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSignUpClick = () => {
+    navigate("/signup")
+  }
+
   return (
     <>
       <div className="h-screen flex items-end justify-center bg-gray-100 font-poppins">
@@ -51,7 +58,7 @@ export const SignIn = () => {
                     DON'T HAVE AN ACCOUNT?
                   </h1>
                 </div>
-                <ColorText text='Sign Up' />
+                <ColorText route={handleSignUpClick} text='Sign Up' />
               </div>
             </div>
           </div>
