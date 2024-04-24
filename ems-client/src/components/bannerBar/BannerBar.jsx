@@ -1,6 +1,7 @@
 import { ReactComponent as BarIcon } from "../../icons/bar.svg";
 import emsLogo from "../../logo/emsLogo.jpg";
 
+
 import { useNavigate } from "react-router-dom";
 import { SearchBar } from "../../components";
 import { DarkMood } from "../../components";
@@ -11,16 +12,20 @@ export const BannerBar = ({ toggleNavbar }) => {
   const handleLogoClick = () => {
     navigate("/");
   };
+
   return (
     <div className="flex relative px-4 w-full h-[70px] bg-blue-400 items-center justify-between ">
       <div className="flex items-center">
         <button
           onClick={() => toggleNavbar()}
+
           className="size-6 items-center mx-4 color-white  z-40"
+
         >
           <BarIcon />
         </button>
         <img
+
           className="h-10 w-10 mx-2 cursor-pointer rounded-full ring-4 ring-gray-400 z-40"
           src={emsLogo}
           onClick={() => handleLogoClick()}
@@ -38,7 +43,9 @@ export const BannerBar = ({ toggleNavbar }) => {
         <SearchBar />
 
         <DarkMood />
+
       </div>
+      
     </div>
   );
 };
