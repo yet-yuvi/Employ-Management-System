@@ -22,9 +22,9 @@ export const Base = () => {
       <div className="flex h-full mt-[70px]">
         <div className="h-full ">{openNavbar && <NavBar />}</div>
 
-        <div>
+        <>
           <Outlet />
-        </div>
+        </>
       </div>
     </div>
   );
