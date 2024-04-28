@@ -5,7 +5,7 @@ export const SearchBar = () => {
   return (
     <>
       <div className="flex h-8 w-3/4 ">
-        <img src={SearchIcon} alt="" />
+        <img src={SearchIcon} alt="" className="cursor-pointer"/>
         <input
           type="text"
           placeholder="Type to search..."
