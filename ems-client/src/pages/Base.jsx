@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { BannerBar, NavBar } from "../components";
 import { useState } from "react";
+import { UserProvider} from "../context"
 
 export const Base = () => {
 
@@ -14,6 +15,7 @@ export const Base = () => {
   };
 
   return (
+    <UserProvider>
     <div className="h-screen w-screen flex flex-col">
       <div className="fixed top-0 left-0 right-0 z-50">
 
@@ -27,5 +29,6 @@ export const Base = () => {
         </>
       </div>
     </div>
+    </UserProvider>
   );
 };
