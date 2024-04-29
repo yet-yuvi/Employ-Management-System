@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import {Base, Home, About, SignIn, SignUp } from "../pages"
+import {Base, Home, About, Profile, SignIn, SignUp } from "../pages"
 
 // import SecureRoute from "./SecureRoute";
 
@@ -19,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <About />
+      },
+      {
+        path: '/profile',
+        element: <Profile />
       },
     ],
   },
