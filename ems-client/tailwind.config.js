@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         'forgetPassword': '#9370DB',
       },
+      fontWeight: {
+        'custom-bold': '500', 
+      },
     },
   },
   plugins: [],
