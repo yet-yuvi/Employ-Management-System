@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import {Base, Home, About, Profile, SignIn, SignUp } from "../pages"
+import {Base, Home, About, Profile, SignIn, SignUp, Employees } from "../pages"
 
 // import SecureRoute from "./SecureRoute";
 
@@ -15,6 +15,10 @@ const router = createBrowserRouter([
       {
         path:'/home',
         element: <Home />
+      },
+      {
+        path: '/employes',
+        element: <Employees />
       },
       {
         path: '/about',

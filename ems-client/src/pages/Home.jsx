@@ -1,10 +1,9 @@
-
-
+import { DashBoard } from "../components";
 
 export const Home = () => {
   return (
-    <>
-      <h1>Home</h1>
-    </>
+    <div className="w-full h-full p-8 bg-gray-100">
+      <DashBoard />
+    </div>
   );
 };
