@@ -4,5 +4,7 @@ export * from "./navBar";
 export * from "./searchBar";
 export * from "./darkMood";
 export * from "./profile";
+export * from "./homeComponents";
+export * from "./employees";
 
 
