@@ -25,32 +25,32 @@ export const Table = (props) => {
           <thead>
             {banner && (
               <tr
-                className={`border-2 border-black bg-${props.banner_color} text-white`}
+                className={`border-2 border-blue-300 bg-${props.banner_color} text-white`}
               >
-                <th className="p-4 border-r border-cyan-200" colSpan={headers.length}>{banner}</th>
+                <th className="p-4 " colSpan={headers.length}>{banner}</th>
               </tr>
             )}
-            <tr className={`border-2 border-black bg-${props.header_color} text-white`}>
+            <tr className={`border-2 border-gray-300 bg-${props.header_color} text-gray-700`}>
               {headers.map((head, idx) => {
                 return (
-                  <th key={idx} className="p-4 border-r border-cyan-200">
+                  <th key={idx} className="p-4 border-r-2 border-gray-300">
                     {head}
                   </th>
                 );
               })}
             </tr>
           </thead>
-          <tbody className="border-2 border-black">
+          <tbody className="border-2 border-gray-300 font-custom-bold text-gray-700">
             {columns.map((column, idx) => {
               return (
-                <tr key={idx} className={`border border-black-200 bg-${props.cell_color}`}>
+                <tr key={idx} className={`border-2 border-gray-300 bg-${props.cell_color}`}>
                   {column.map((col, colIdx) => {
                     return (
-                      <td key={colIdx} className="p-4 border border-gray-900">
+                      <td key={colIdx} className="p-4 border-2 border-gray-300">
                         {typeof col != "object" ? (
                           col
                         ) : (
-                          <button className={`bg-${props.button_color} ring-2 p-1`}>
+                          <button className={`hover:bg-${props.button_color} ring-2 p-1`}>
                             {col.name}
                           </button>
                         )}

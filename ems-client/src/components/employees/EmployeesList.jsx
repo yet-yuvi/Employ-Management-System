@@ -2,17 +2,24 @@ import React, { useEffect } from "react";
 import { Table } from "../table/Table";
 
 export const EmployeesList = () => {
-  const headers = ["SL", "Name", "Job", "Favorite Color"];
+  const headers = ["ID", "Full name", "Email", "Age", "Depertment", "Position", "Joining Date"];
   const columns = [
-    [1, "Cy Ganderton", "Quality Control Specialist", "Blue"],
-    [2, "Cy Ganderton", "Quality Control Specialist", "Blue"],
-    [3, "Cy Ganderton", "Quality Control Specialist", "Blue"],
-    [4, "Cy Ganderton", "Quality Control Specialist", "Blue"],
+    [1, "Cy Ganderton", "example@email.com", "33", "Engineering", "Software Engineer", "Novembor 29, 2023"],
+    [2, "Cy Ganderton", "example@email.com", "33", "Engineering", "Software Engineer", "Novembor 29, 2023"],
+    [3, "Cy Ganderton", "example@email.com", "33", "Engineering", "Software Engineer", "Novembor 29, 2023"],
+    [5, "Cy Ganderton", "example@email.com", "33", "Engineering", "Software Engineer", "Novembor 29, 2023"],
+    [6, "Cy Ganderton", "example@email.com", "33", "Engineering", "Software Engineer", "Novembor 29, 2023"],
+    [7, "Cy Ganderton", "example@email.com", "33", "Engineering", "Software Engineer", "Novembor 29, 2023"],
+    [8, "Cy Ganderton", "example@email.com", "33", "Engineering", "Software Engineer", "Novembor 29, 2023"],
+    [9, "Cy Ganderton", "example@email.com", "33", "Engineering", "Software Engineer", "Novembor 29, 2023"],
+    [10, "Cy Ganderton", "example@email.com", "33", "Engineering", "Software Engineer", "Novembor 29, 2023"],
+    [11, "Cy Ganderton", "example@email.com", "33", "Engineering", "Software Engineer", "Novembor 29, 2023"],
+    [12, "Cy Ganderton", "example@email.com", "33", "Engineering", "Software Engineer", "Novembor 29, 2023"],
   ];
   useEffect(() => {
     for (let item of columns) {
       if (true) {
-        item.push({ name: "Edit", user: {} });
+        item.push({ name: "Clicl to Detail", user: {} });
       }
     }
     if (true) {
@@ -20,14 +27,14 @@ export const EmployeesList = () => {
     }
   });
   return (
-    <div className="w-full flex justify-center m-2">
+    <div className="w-full flex justify-center p-10">
       <Table
         headers={headers}
         columns={columns}
         banner={"Employees"}
-        banner_color={"black"}
-        header_color={"gray-700"}
-        cell_color={"gray-300"}
+        banner_color={"blue-300"}
+        header_color={"gray-200"}
+        cell_color={"gray-100"}
         button_color={"cyan-300"}
       />
     </div>
