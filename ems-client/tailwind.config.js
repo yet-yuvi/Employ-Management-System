@@ -9,6 +9,9 @@ module.exports = {
       fontWeight: {
         'custom-bold': '500', 
       },
+      height: {
+        'custom-height': '93vh',
+      },
     },
   },
   plugins: [],

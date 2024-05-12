@@ -9,9 +9,7 @@ export const Base = () => {
 
   const toggleNavbar = (event) => {
     console.log("toggling");
-
     setOpenNavbar((prevOpenNavbar) => !prevOpenNavbar);
-
   };
 
   return (
@@ -22,7 +20,7 @@ export const Base = () => {
         <BannerBar toggleNavbar={toggleNavbar} />
       </div>
       <div className="flex h-full mt-[70px]">
-        <div className="h-full ">{openNavbar && <NavBar />}</div>
+        <div className={`h-full ${openNavbar ? 'mr-52' : 'mx-auto'}`}>{openNavbar && <NavBar />}</div>
 
         <>
           <Outlet />
