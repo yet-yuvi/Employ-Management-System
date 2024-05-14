@@ -6,5 +6,7 @@ export * from "./darkMood";
 export * from "./profile";
 export * from "./homeComponents";
 export * from "./employees";
+export * from "./modals";
+
 
 
