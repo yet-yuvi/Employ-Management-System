@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { BannerBar, NavBar, BaseModal } from "../components";
+import { BannerBar, NavBar, BaseModal, UserDetailDialog } from "../components";
 import { useState, useRef, useEffect } from "react";
 import { UserProvider, ModalProvider } from "../context";
 
@@ -24,9 +24,9 @@ export const Base = () => {
     <UserProvider>
       <ModalProvider>
         <div className="h-screen w-screen flex flex-col relative">
-          <div className="absolute top-1/2 left-1/2 h-4 w-4 z-20 ">
+          <div className="absolute top-32 left-1/3 z-20 ">
             <BaseModal>
-              <div>Hello</div>
+              <UserDetailDialog />
             </BaseModal>
           </div>
           <div className="fixed top-0 left-0 right-0 z-50">
