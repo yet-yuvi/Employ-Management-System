@@ -25,6 +25,7 @@ export const Table = (props) => {
           <thead>
             {banner && (
               <tr
+
                 className={`border-2 border-blue-300 ${props.banner_color} text-white`}
               >
                 <th className="p-4 " colSpan={headers.length}>{banner}</th>

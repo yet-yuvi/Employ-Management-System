@@ -42,6 +42,7 @@ export const EmployeesList = () => {
       <Table
         headers={headers}
         columns={columns}
+
         banner="Employees"
         banner_color="bg-blue-300"
         header_color="bg-gray-200"
