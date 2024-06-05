@@ -32,7 +32,7 @@ export const NavBar = () => {
         </div>
       </div>
       <button
-        className="mt-auto mb-10 bg-blue-300 p-3 text-xl font-semibold text-gray-800 border-2 shadow-md rounded-xl text-center transform hover:scale-105 transition-transform ease-in-out duration-300"
+        className="mt-auto mb-10 bg-blue-300 p-3 text-xl font-semibold text-gray-800 border-2 shadow-md rounded-xl text-center transform hover:scale-105 transition-transform ease-in-out duration-300 z-30"
         onClick={handleLogoutClick}
       >
         Logout
