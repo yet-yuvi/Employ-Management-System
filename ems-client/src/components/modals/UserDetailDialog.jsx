@@ -4,7 +4,8 @@ import { UserContext } from "../../context";
 export const UserDetailDialog = () => {
   const { user } = useContext(UserContext);
   return (
-    <div className="w-5/3  bg-white p-4 shadow-lg border-4 border-gray-100 rounded-md">
+
+    <div className="w-full  bg-white p-4 shadow-lg border-4 border-gray-100 rounded-md z-50">
       <h1 className="text-4xl font-custom-bold text-gray-800">
         {user.fname}
         <span className="ml-4" />

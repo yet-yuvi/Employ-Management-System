@@ -2,7 +2,7 @@ import userProfileImage from "../image/User-Profile-PNG.png";
 export const About = () => {
   return (
     <>
-      <div className="p-4 bg-gray-100 flex items-center justify-center w-full gap-4">
+      <div className="w-full h-full flex items-center justify-center bg-gray-100  p-4 gap-4">
         <div className="flex flex-col items-end w-1/4 ">
           <img
             className="w-80 h-80 shadow-md rounded-full ring-8 ring-blue-200"
