@@ -3,13 +3,19 @@ import { createContext, useState } from "react";
 export const ModalContext = createContext();
 
 export const ModalProvider = ({ children }) => {
-  const [showModal, setShowModal] = useState(true);
+  const [showEditModal, setShowEditModal] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [showUserModal, setShowUserModal] = useState(false);
 
   return (
     <ModalContext.Provider
       value={{
-        showModal,
-        setShowModal,
+        showEditModal,
+        showDeleteModal,
+        showUserModal,
+        setShowEditModal,
+        setShowDeleteModal,
+        setShowUserModal,
       }}
     >
       {children}
